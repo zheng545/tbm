@@ -1,0 +1,6 @@
+Pirelli: PVRR.dbc
+baud rate = 1000k
+
+
+Sensata: BAICC_HC1_TPMS_Matrix_J1939_V1.0 - mod.dbc
+baud rate = 500k
