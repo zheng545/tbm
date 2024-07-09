@@ -1,1 +1,100 @@
 # tbm
+
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid1\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid2\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid3\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li2160\lin2160 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid201\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\fs26 \cf0 \expnd0\expndtw0\kerning0
+Name: Bowen Zheng \
+Edited on 06/05/2023
+\f1\b\fs36 \
+Overview\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf0 This project focuses on developing safety-critical algorithms designed to handle high-speed tire blowouts. The algorithms integrate braking, steering, and suspension systems to enhance overall vehicle safety and performance. The key components and files of this project are outlined below.\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f1\b\fs36 \cf0 Project Files\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls1\ilvl0
+\fs24 \cf0 \kerning1\expnd0\expndtw0 {\listtext	1	}\expnd0\expndtw0\kerning0
+mVeh_fun_tbm.prj
+\f0\b0 : This is the main project file. Opening this file ensures that all necessary components and dependencies for the Simulink model are preloaded and accessible.\
+\ls1\ilvl0
+\f1\b \kerning1\expnd0\expndtw0 {\listtext	2	}\expnd0\expndtw0\kerning0
+mVeh_fun_tbm.slx
+\f0\b0 : This is the primary Simulink model file. It is used with Speedgoat HIL (Hardware-in-the-Loop) systems for simulation and vehicle testing. The model is divided into three main sections:\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls1\ilvl1
+\f1\b \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+Read
+\f0\b0 : Requires the dbc files from the vehicle for reading data.\
+\ls1\ilvl1
+\f1\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+Process
+\f0\b0 : Contains the core algorithms for handling braking, steering, and suspension systems during a tire blowout. The main processing block is 
+\f2\fs26 cu_tbm
+\f0\fs24  which references 
+\f2\fs26 tbm_ref
+\f0\fs24 .\
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\partightenfactor0
+\ls1\ilvl2\cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8259 	}\expnd0\expndtw0\kerning0
+\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls1\ilvl1
+\f1\b \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+Send
+\f0\b0 : Requires the dbc files from the vehicle for sending processed data back to the vehicle systems.\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f1\b\fs36 \cf0 Key Components\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0
+\fs24 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+TBM (Tire Blowout Mechanism)
+\f0\b0 : This component is the core of the project, focusing on managing the vehicle's response during a tire blowout.\
+\ls2\ilvl0
+\f1\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Speedgoat HIL
+\f0\b0 : The model is tested using Speedgoat HIL systems to ensure real-time simulation and validation with actual vehicle hardware.\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f1\b\fs36 \cf0 Security Notice\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf0 For security reasons, the original dbc files used for reading and sending data are not included in this repository. Ensure you have the necessary dbc files from your vehicle to properly utilize the 
+\f2\fs26 Read
+\f0\fs24  and 
+\f2\fs26 Send
+\f0\fs24  sections of the Simulink model.\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f1\b\fs36 \cf0 How to Use\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0
+\f0\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 {\listtext	1	}\expnd0\expndtw0\kerning0
+Open the 
+\f2\fs26 mVeh_fun_tbm.prj
+\f0\fs24  file to preload all necessary components and environment.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	2	}\expnd0\expndtw0\kerning0
+Open the 
+\f2\fs26 mVeh_fun_tbm.slx
+\f0\fs24  file in MATLAB Simulink.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	3	}\expnd0\expndtw0\kerning0
+Ensure the vehicle's dbc files are available for the 
+\f2\fs26 Read
+\f0\fs24  and 
+\f2\fs26 Send
+\f0\fs24  sections.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	4	}\expnd0\expndtw0\kerning0
+Run the simulation or connect to Speedgoat HIL for real-time testing.\
+}
