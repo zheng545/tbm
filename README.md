@@ -35,12 +35,14 @@ below.
 - **Speedgoat HIL**: The model is tested using Speedgoat HIL systems to
   ensure real-time simulation and validation with actual vehicle
   hardware.  
-  **Security Notice**  
+
+**Security Notice**  
   For security reasons, the original dbc files used for reading and
   sending data are not included in this repository. Ensure you have the
   necessary dbc files from your vehicle to properly utilize the `Read`
   and `Send` sections of the Simulink model.  
-  **How to Use**
+
+**How to Use**
 
 1.  Open the `mVeh_fun_tbm.prj` file to preload all necessary components
     and environment.
